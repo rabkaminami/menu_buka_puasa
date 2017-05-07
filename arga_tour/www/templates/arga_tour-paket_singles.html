@@ -1,0 +1,14 @@
+	<ion-view view-title="{{ paket.title }}" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-paket_singles" class="page-paket_singles">
+		
+			<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+					<div class="item item-divider"  ng-bind-html="paket.title | to_trusted">{{paket.title}}</div>
+					<div class="item noborder"><img class="full-image" image-lazy-loader="lines" image-lazy-src="{{paket.image}}"   zoom-view="true" zoom-src="{{paket.image}}"/></div>
+					<div class="item item-text-wrap noborder to_trusted" ng-bind-html="paket.maintext | strHTML"></div>
+			</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

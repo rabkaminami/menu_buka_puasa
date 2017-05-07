@@ -1,0 +1,14 @@
+	<ion-view view-title="{{ wahana.title }}" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-wahana_singles" class="page-wahana_singles">
+		
+			<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+					<div class="item item-divider"  ng-bind-html="wahana.title | to_trusted">{{wahana.title}}</div>
+					<div class="item noborder"><img class="full-image" image-lazy-loader="lines" image-lazy-src="{{wahana.image}}"   zoom-view="true" zoom-src="{{wahana.image}}"/></div>
+					<div class="item item-text-wrap noborder to_trusted" ng-bind-html="wahana.maintext | strHTML"></div>
+			</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
